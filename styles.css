@@ -2009,6 +2009,54 @@ body {
     }
 }
 
+/* ==========================================
+   Mobile Navbar Improvements
+   ========================================== */
+/* Ensure hamburger is always visible and aligned on tablet/phone */
+@media (max-width: 991.98px) {
+    #mainNav .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #mainNav .navbar-brand {
+        margin-right: 0;
+    }
+
+    /* Hide long brand text to prevent overflow */
+    .brand-text {
+        display: none;
+    }
+
+    #mainNav .navbar-toggler {
+        margin-left: auto;
+        border: none;
+        box-shadow: none;
+        padding: 0.35rem 0.5rem;
+    }
+
+    #mainNav .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    /* Reduce navbar vertical padding for compact look */
+    .navbar {
+        padding: 0.75rem 0;
+    }
+
+    /* Make collapsed menu comfortable and full-width under header */
+    #mainNav .navbar-collapse {
+        padding-top: 0.5rem;
+    }
+}
+
+/* Explicit toggler icon to ensure visibility on light navbar */
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23111827' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 /* Print styles */
 @media print {
     .navbar,
