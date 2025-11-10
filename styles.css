@@ -44,6 +44,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -2014,7 +2015,8 @@ body {
    ========================================== */
 /* Ensure hamburger is always visible and aligned on tablet/phone */
 @media (max-width: 991.98px) {
-    #mainNav .container {
+    #mainNav .container,
+    #mainNav .container-fluid {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -2049,6 +2051,7 @@ body {
     /* Make collapsed menu comfortable and full-width under header */
     #mainNav .navbar-collapse {
         padding-top: 0.5rem;
+        width: 100%;
     }
 }
 
